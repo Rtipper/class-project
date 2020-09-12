@@ -15,7 +15,7 @@ header {
 
 header img {
     float: left;
-
+    padding: 10px;
 }
 
 h1 {
