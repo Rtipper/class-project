@@ -19,6 +19,10 @@ function getColors() {
     var response = prompt('Is your favorite color blue or red?');
     var message;
 
+    while(response != 'blue' && response != 'red') {
+        message = prompt('Is your favorite color blue or red? BE SPECIFIC!')
+    }
+
     if (response === 'blue') {
     message = 'Blue is great!';
     }
