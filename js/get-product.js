@@ -15,25 +15,43 @@
 
 // document.write('<h3>' + message + '</h3>');
 
-function getColors() {
+function getProduct() {
     var response = prompt('Is your favorite color blue or red?');
-    var message;
+    var item;
 
     while(response != 'blue' && response != 'red') {
-        message = prompt('Is your favorite color blue or red? BE SPECIFIC!')
+        item = prompt('Is your favorite color blue or red? BE SPECIFIC!')
     }
 
     if (response === 'blue') {
-    message = 'Blue is great!';
-    }
-    else if (response === 'red') {
-        message = 'Red is great!';
-    }
-    else {
-        message = "That's a bold choice";
+        item = '<img src="../images/Sky-Blue-Square-.jpg">';
+    }   else if (response === 'red') {
+        item = '<img src="../images/redsquare.png">';
     }
 
-    return document.write('<h3>' + message + '</h3>');
+    return item;
 }
 
-getColors();
+// helper function
+function getCount() {
+    var count = prompt('Great! How many would you like?');
+    while(isNaN(count) || count === '') {
+        count = prompt('Please enter a number. How many would you like?');
+    }
+    return count;
+}
+
+function showOrder() {
+    var result = '';
+    var itemType = getProduct();
+    var total = getCount();
+
+    for(var i = 0; i < total; i++) {
+        result = result + '<p>' + itemType + '</p>';
+    }
+
+    return document.write(result);
+
+}
+
+showOrder();
