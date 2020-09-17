@@ -23,9 +23,9 @@ function getProduct() {
         response = prompt('Is your favorite color blue or red? BE SPECIFIC!')
     }
         if (response === 'blue') {
-        item = '<img src="/images/bluesquare.jpg">';
+        item = '<img src="images/bluesquare.jpg">';
     }   else if (response === 'red') {
-        item = '<img src="/images/redsquare.png">';
+        item = '<img src="images/redsquare.png">';
     }
 
     return item;
