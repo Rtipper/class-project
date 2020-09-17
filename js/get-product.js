@@ -20,7 +20,7 @@ function getProduct() {
     var item;
 
     while(response != 'blue' && response != 'red') {
-        item = prompt('Is your favorite color blue or red? BE SPECIFIC!')
+        response = prompt('Is your favorite color blue or red? BE SPECIFIC!')
     }
         if (response === 'blue') {
         item = '<img src="/images/Sky-Blue-Square-.jpg">';
